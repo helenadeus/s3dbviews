@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <link rel="stylesheet" href="mm_health_nutr.css" type="text/css" />
+ <head>
+  <script type="text/javascript" language="JavaScript">
+  
+ 
+function ruleInsertBuilder() {
+    if(parent.frames.display.document.getElementById('url'))
+	  var url = parent.frames.display.document.getElementById('url').value;
+	 if(parent.frames.display.document.getElementById('key'))
+	  var key = parent.frames.display.document.getElementById('key').value;
+	 if(parent.frames.display.document.getElementById('username'))
+	  var username = parent.frames.display.document.getElementById('username').value;
+	 if(parent.frames.display.document.getElementById('password'))
+	  var password = parent.frames.display.document.getElementById('password').value;
+	 if(parent.frames.display.document.getElementById('project_id'))
+	  var project_id = parent.frames.display.document.getElementById('project_id').value;
+
+
+	if(url && key && project_id)
+	{ var toOpen = "import/ruleInsert.php?url=" +url+ "&key=" +key+ "&project_id=" + project_id ;}
+	else
+	{ var toOpen = "import/ruleInsert.php"; }
+	parent.frames.display.location=toOpen;
+	
+}
+
+function infoInterfaceBuilder() {
+     if(parent.frames.display.document.getElementById('url'))
+	 var url = parent.frames.display.document.getElementById('url').value;
+	 if(parent.frames.display.document.getElementById('key'))
+	  var key = parent.frames.display.document.getElementById('key').value;
+	 if(parent.frames.display.document.getElementById('username'))
+	  var username = parent.frames.display.document.getElementById('username').value;
+	 if(parent.frames.display.document.getElementById('password'))
+	  var password = parent.frames.display.document.getElementById('password').value;
+	 if(parent.frames.display.document.getElementById('project_id'))
+	 var  project_id = parent.frames.display.document.getElementById('project_id').value;
+	 if(parent.frames.display.document.getElementById('collection_id'))
+	  var collection_id = parent.frames.display.document.getElementById('collection_id').value;
+
+	 
+	 if(url && key && project_id)
+	 { var toOpen = "interfaceBuilder.php?url=" +url+ "&key=" +key+ "&project_id=" + project_id;}
+	 else {
+	    var toOpen = "interfaceBuilder.php";  
+	 }
+	 
+	parent.frames.display.location=toOpen;
+ } 
+  
+function infoImportData() {
+    if(parent.frames.display.document.getElementById('url'))
+	  var url = parent.frames.display.document.getElementById('url').value;
+	 if(parent.frames.display.document.getElementById('key'))
+	  var key = parent.frames.display.document.getElementById('key').value;
+	 if(parent.frames.display.document.getElementById('username'))
+	  var username = parent.frames.display.document.getElementById('username').value;
+	 if(parent.frames.display.document.getElementById('password'))
+	  var password = parent.frames.display.document.getElementById('password').value;
+	 if(parent.frames.display.document.getElementById('project_id'))
+	  var project_id = parent.frames.display.document.getElementById('project_id').value;
+
+
+	if(url && key && project_id)
+	{ var toOpen = "import/importData.php?url=" +url+ "&key=" +key+ "&project_id=" + project_id ;}
+	else
+	{ var toOpen = "import/importData.php"; }
+	parent.frames.display.location=toOpen;
+	
+}
+
+function buildSPARQLurl() {
+if(parent.frames.display.document.getElementById('url'))
+	  var url = parent.frames.display.document.getElementById('url').value;
+	 if(parent.frames.display.document.getElementById('key'))
+	  var key = parent.frames.display.document.getElementById('key').value;
+	 
+	  
+	  if(url && key)
+	{ var toOpen = "http://ibl.mdanderson.org/~mhdeus/sparql/s3db_endpoint.html?url=" +url+ "&key=" +key;}
+	else
+	{ var toOpen = "http://ibl.mdanderson.org/~mhdeus/sparql/s3db_endpoint.html"; }
+	parent.frames.display.location=toOpen;
+	
+	  
+}
+
+  
+  </script>
+
+ </head>
+
+ <body bgcolor="#5c743d">
+  		<input type="hidden" id="url">
+		<input type="hidden" id="username">
+		<input type="hidden" id="password">
+		<input type="hidden" id="key">
+		<input type="hidden" id="project_id">
+		<input type="hidden" id="collection_id">
+
+		<table border="0" cellspacing="0" cellpadding="0" width="165" id="navigation">
+        <tr>
+          <td width="165">&nbsp;<br />
+		 &nbsp;<br /></td>
+        </tr>
+        <tr>
+          <td width="165"><a href="javascript:ruleInsertBuilder();" class="navText">Rule Insert Form</a></td>
+        </tr>
+		<tr>
+          <td width="165"><a href="javascript:infoInterfaceBuilder();" class="navText">Statement Insert Form </a></td>
+        </tr>
+		<tr>
+          <td width="165"><a href="javascript:infoImportData();" class="navText">Express Statement Insert (from excel)</a></td>
+        </tr>
+		<tr>
+          <td width="165"><a href="javascript:buildSPARQLurl();" class="navText"> SPARQL navigator </a></td>
+        </tr>
+		<tr>
+          <td width="165"><a href="http://docs.s3db.org/" target="display" class="navText"> S3DB Docs </a></td>
+        </tr>
+		<tr>
+          <td width="165"><a href="interfaceBuilder.php" target="display" class="navText">Logout</a></td>
+        </tr>
+		
+        
+        <tr>
+          <td width="165">Open S3DB <a href="#" onClick="window.open(document.getElementById('url').value)" class="navText"></a></td>
+        </tr>
+       
+      </table>
+ 
+ </body>
+</html>
